@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+    @font-face {
+      font-family: 'Economica';
+      font-style: normal;
+      font-weight: 400;
+      src: url(fonts/Economica-normal-400.woff2) format("woff2"); }
+
+    @font-face {
+      font-family: 'Economica';
+      font-style: normal;
+      font-weight: 400;
+      src: local("Economica"), local("Economica-Regular"), url(fonts/Economica-normal-400.svg) format("svg"); }
+
+      .remark-slide-content {
+          font-family: "Economica";
+      }
+
+      body { 
+        background-color: black !important;
+        color: #2C2E26;
+      }
+      
+      .remark-slide-scaler {
+        box-shadow: none;        
+      }
+
+      h1, h2, h3 {
+        font-weight: normal;
+        text-transform: uppercase;
+        line-height: 1.3em;
+        margin-bottom: 0.5em !important;
+      }
+
+
+      h1 {
+        margin: 0;
+        font-size: 4.5em !important;
+      }
+
+      .bg1 h1 {
+        background: rgba(0, 0, 0,0.7);
+      }
+
+      .l30 {
+        float: left;
+        width: 50%;
+      }
+
+      .r70 {
+        float: right;
+        width: 50%
+      }
+
+      .bg2 h2 {
+        background: rgba(0, 0, 0, 0.3);
+      }      
+
+      h2 {
+       font-size: 3.5em !important; 
+       margin: 0;
+      }
+
+      h3 {
+       font-size: 2em !important;  
+      }
+
+      .strike {
+        text-decoration: line-through;
+      }
+
+      .nok {
+        color: white;
+        background-color: #B82339;
+        text-decoration: line-through;
+      }
+
+      .black {
+        background-color: black;
+      }
+
+      .ok {
+        color: white;
+        background-color: #458957;
+      }
+
+      h1 strong, h2 strong {
+        font-weight: normal;
+        color: white;
+        background-color: #28c4c9;
+      }
+
+      .invert {
+        color: white;
+      }
+
+      .fullscreen {
+        background-size: 100%;
+      }
+
+      .top {
+        position: absolute;
+        top: -5px;
+        left: 0px;
+      }
+
+      .right {
+        text-align: right;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+
+
+      .bozosity {
+        background-color: #E43C0F;
+        color: white;
+        font-size: 15px;
+      }
+
+      .muchbetter {
+        background-color: #70BE3C;
+        color: white;
+        font-size: 15px; 
+      }
+
+
+    .gizma p, .gizma li {
+      font-size: 17px;
+      margin-bottom: 0px;
+    }
+
+    .gizma ul {
+      margin: 0 !important;
+    }
+
+    .gizma .attention p, .gizma .attention {
+      font-size: 50px;
+    }
+
+    .gizma .attention li {
+      font-size: 30px;
+    }
+
+    .splash { 
+        font-weight: bold;
+        position: absolute;
+        right: 1.5em;
+        bottom: 1em;
+        color: #EEE;
+        text-align: right;
+      }
+
+      .splash big {
+        font-size: 2.5em;
+      }
+
+      .splash small {
+        font-size: 1.6em;
+      }
+
+      .splash img {
+        width: 40px;
+        margin-right: 10px;
+        vertical-align: middle;
+      }
+
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle, invert, bg1, bg2
+background-image: url(splash.jpg)
+# Environment 3.0
+## How to make IT peeps love you
+<div class="splash">
+  <big>Eduards Sizovs</big>
+  <br/>
+  <img src="twitter.png"><small>@eduardsi</small>
+</div>
+???
+- We will only scratch the surface.
+
+---
+### - Head of Software Development and Chief Architect at 4finance group
+
+---
+### - Head of Software Development and Chief Architect at 4finance group
+### - Coach (Continuous Delivery, Teamwork, Architecture...)
+
+---
+### - Head of Software Development and Chief Architect at 4finance group
+### - Coach (Continuous Delivery, Teamwork, Architecture...)
+### - Entrepreneur (DevTernity, DevChampions, GeekTravel, Brainsnap)
+
+---
+### - Head of Software Development and Chief Architect at 4finance group
+### - Coach (Continuous Delivery, Teamwork, Architecture...)
+### - Entrepreneur (DevTernity, DevChampions, GeekTravel, Brainsnap)
+### - Clients in the UK, Germany and Silicon Valley
+
+---
+### - Head of Software Development and Chief Architect at 4finance group
+### - Coach (Continuous Delivery, Teamwork, Architecture...)
+### - Entrepreneur (DevTernity, DevChampions, GeekTravel, Brainsnap)
+### - Clients in the UK, Germany and Silicon Valley
+### - Mentored more than 50 awesome teams
+
+---
+### - Head of Software Development and Chief Architect at 4finance group
+### - Coach (Continuous Delivery, Teamwork, Architecture...)
+### - Entrepreneur (DevTernity, DevChampions, GeekTravel, Brainsnap)
+### - Clients in the UK, Germany and Silicon Valley
+### - Mentored more than 50 awesome teams
+### - Conducted 550+ interviews
+
+---
+### - Head of Software Development and Chief Architect at 4finance group
+### - Coach (Continuous Delivery, Teamwork, Architecture...)
+### - Entrepreneur (DevTernity, DevChampions, GeekTravel, Brainsnap)
+### - Clients in the UK, Germany and Silicon Valley
+### - Mentored more than 50 awesome teams
+### - Conducted 550+ interviews
+### - Interviwed at Google, Microsoft, Netflix, Ebay
+???
+They all suck.
+
+
+---
+class: middle
+# **1.** Trapping
+# **2.** Interviewing
+# **3.** Maintaining ♥ Habitat
+- 
+???
+Animal trapping, or simply trapping, is the use of a device to remotely catch an animal. Animals may be trapped for a variety of purposes, including food, the fur trade, hunting, pest control, and wildlife management.
+
+---
+class: center, middle
+# Why robots will never be good at hiring?
+???
+- ITS CREATIVE WORK AND THERE IS NO SINGLE RECIPE FOR SUCCESS.
+- That's why most companies suck at hiring. 
+- Stealing from Google. Google suck at hiring. 
+- Good news! Creative companies will always be step ahead. :)
+
+---
+class: center, middle, invert
+background-image:url(trapping.png)
+# Trapping
+
+---
+class: center, middle
+# Job Ads
+???
+- What is job ad? IT S A PITCH!!! 
+- Make sure candidate feels he’s wasting his life by working for someone else
+
+---
+class: center, middle
+# .strike[Job Ads] PITCH
+
+---
+### Express what the hell you do on the market
+???
+environment, process and technology
+
+---
+### Express what the hell you do on the market
+### Express your beliefs
+
+---
+### Express what the hell you do on the market
+### Express your beliefs
+### Express how do you get things done
+
+
+---
+### Express what the hell you do on the market
+### Express your beliefs
+### Express how do you get things done
+### Express your goals, current problems and why do you need me
+
+---
+class: center, middle
+# Every word must make candidate LOVE YOU.
+## Remove everything else.
+
+---
+class: center, middle, section
+# Question time!
+???
+Made in Latvia (I hide there some stuff from Visma job ads)
+
+---
+class: middle, center, bozosity
+## Ranked by Fortune magazine’s annual standing of the world’s most admired companies in the Internet Services & Retailing sector for many years, our family of websites is one of the largest in the world, with over two billion monthly visits reaching users in more than 200 countries
+???
+- Do you understand what they do?
+- Noise! Cold and totally unreadable.
+
+---
+class: middle, center, muchbetter
+# We deliver one of the greatest retail stores available on the web.
+
+---
+class: center, middle, bozosity
+## You will gain experience in project and/or program implementation and execution, as well as in arranging company’s structure and organizational processes enhancing efficiency of the organization and promoting achievement of the strategic goals.
+
+---
+class: center, middle, muchbetter
+## Experience in epic projects, which will affect humanity.
+
+---
+class: middle, center, bozosity
+## ...Report defects in a timely fashion and work with the Development team to manage defects until issues are resolved
+
+---
+class: center, middle, muchbetter
+## Make sure our product has top-notch quality.
+
+---
+class: center, middle, bozosity
+## 5+ years of Java programming experience
+???
+- men confident by 60%, women don’t feel confident until they’ve checked off each item on the list.
+- we need woman, because they make teams productive at about 10%.
+
+---
+class: center, middle, muchbetter
+## Impressive Java programming skills
+
+---
+background-image:url(visma.png)
+
+
+---
+class: gizma
+Gizma is innovative FinTech company operating in Europe and Middle East. Our mission is to provide clients with easily accessible financial tools to take advantage of the latest technology, applied in everyday life. Ambitious missions require out-of-the-box thinking, therefore we’re looking for talented individuals interested in building products that rock.
+
+**What does it mean to be a developer at Gizma?**<br>
+Since software is core part of our business, there is no gap between IT and business - we work as a single cross-functional team where all opinions and ideas matter. Because continuous innovation and continuous delivery are part of our daily life, we don’t have formal processes that our competitors tend to apply - we focus on collaboration instead.
+
+**We care about our products** <br>
+Product development goes far beyond coding. We strive to understand problem domain, work closely with customers, inject new ideas and experiment a lot. Regular R&D days are just small part of it.
+
+**We care about software quality**<br>
+Everyone in the team thinks long-term and aspires to write clean and maintainable code. We take ownership over architecture and automated testing. Refactoring, TDD and occasional pair programming are part of our daily life.
+
+**We are extremely pragmatic**<br>
+We always stick to “best tool for the problem” approach - we listen to industry trends with big interest, but evaluate everything in our context. We do things that matter to our customers now, but maintain vision to stay on the right path. We try to achieve more by working smart, not hard.
+
+**We stay modern**
+- Our backend runs on Java 8, Groovy, Spring, Hibernate, Camel, Hazelcast, Guava and other spices
+- Our services speak REST
+- Our web runs on HTML5 with Angular
+- Our infrastructure is backed by Rackspace, Ansible, Jenkins and Gradle
+- Our lightweight process is based on Kanban and Scrum or a mix of both
+
+**Share our values?**<br>
+Then drop us few lines to rockstars@gizma.com and we will contact you promptly
+
+---
+class: gizma
+.attention[Gizma is innovative FinTech company operating in Europe and Middle East. Our mission is to provide clients with easily accessible financial tools to take advantage of the latest technology, applied in everyday life. Ambitious missions require out-of-the-box thinking, therefore we’re looking for talented individuals interested in building products that rock.]
+
+**What does it mean to be a developer at Gizma?**<br>
+Since software is core part of our business, there is no gap between IT and business - we work as a single cross-functional team where all opinions and ideas matter. Because continuous innovation and continuous delivery are part of our daily life, we don’t have formal processes that our competitors tend to apply - we focus on collaboration instead.
+
+**We care about our products** <br>
+Product development goes far beyond coding. We strive to understand problem domain, work closely with customers, inject new ideas and experiment a lot. Regular R&D days are just small part of it.
+
+**We care about software quality**<br>
+Everyone in the team thinks long-term and aspires to write clean and maintainable code. We take ownership over architecture and automated testing. Refactoring, TDD and occasional pair programming are part of our daily life.
+
+**We are extremely pragmatic**<br>
+We always stick to “best tool for the problem” approach - we listen to industry trends with big interest, but evaluate everything in our context. We do things that matter to our customers now, but maintain vision to stay on the right path. We try to achieve more by working smart, not hard.
+
+**We stay modern**
+- Our backend runs on Java 8, Groovy, Spring, Hibernate, Camel, Hazelcast, Guava and other spices
+- Our services speak REST
+- Our web runs on HTML5 with Angular
+- Our infrastructure is backed by Rackspace, Ansible, Jenkins and Gradle
+- Our lightweight process is based on Kanban and Scrum or a mix of both
+
+**Share our values?**<br>
+Then drop us few lines to rockstars@gizma.com and we will contact you promptly
+
+---
+class: gizma
+Gizma is innovative FinTech company operating in Europe and Middle East. Our mission is to provide clients with easily accessible financial tools to take advantage of the latest technology, applied in everyday life. Ambitious missions require out-of-the-box thinking, therefore we’re looking for talented individuals interested in building products that rock.
+
+.attention[**What does it mean to be a developer at Gizma?**<br>
+Since software is core part of our business, there is no gap between IT and business - we work as a single cross-functional team where all opinions and ideas matter. Because continuous innovation and continuous delivery are part of our daily life, we don’t have formal processes that our competitors tend to apply - we focus on collaboration instead.]
+
+**We care about our products** <br>
+Product development goes far beyond coding. We strive to understand problem domain, work closely with customers, inject new ideas and experiment a lot. Regular R&D days are just small part of it.
+
+**We care about software quality**<br>
+Everyone in the team thinks long-term and aspires to write clean and maintainable code. We take ownership over architecture and automated testing. Refactoring, TDD and occasional pair programming are part of our daily life.
+
+**We are extremely pragmatic**<br>
+We always stick to “best tool for the problem” approach - we listen to industry trends with big interest, but evaluate everything in our context. We do things that matter to our customers now, but maintain vision to stay on the right path. We try to achieve more by working smart, not hard.
+
+**We stay modern**
+- Our backend runs on Java 8, Groovy, Spring, Hibernate, Camel, Hazelcast, Guava and other spices
+- Our services speak REST
+- Our web runs on HTML5 with Angular
+- Our infrastructure is backed by Rackspace, Ansible, Jenkins and Gradle
+- Our lightweight process is based on Kanban and Scrum or a mix of both
+
+**Share our values?**<br>
+Then drop us few lines to rockstars@gizma.com and we will contact you promptly
+
+---
+class: gizma
+Gizma is innovative FinTech company operating in Europe and Middle East. Our mission is to provide clients with easily accessible financial tools to take advantage of the latest technology, applied in everyday life. Ambitious missions require out-of-the-box thinking, therefore we’re looking for talented individuals interested in building products that rock.
+
+**What does it mean to be a developer at Gizma?**<br>
+Since software is core part of our business, there is no gap between IT and business - we work as a single cross-functional team where all opinions and ideas matter. Because continuous innovation and continuous delivery are part of our daily life, we don’t have formal processes that our competitors tend to apply - we focus on collaboration instead.
+
+.attention[**We care about our products** <br>
+Product development goes far beyond coding. We strive to understand problem domain, work closely with customers, inject new ideas and experiment a lot. Regular R&D days are just small part of it.]
+
+**We care about software quality**<br>
+Everyone in the team thinks long-term and aspires to write clean and maintainable code. We take ownership over architecture and automated testing. Refactoring, TDD and occasional pair programming are part of our daily life.
+
+**We are extremely pragmatic**<br>
+We always stick to “best tool for the problem” approach - we listen to industry trends with big interest, but evaluate everything in our context. We do things that matter to our customers now, but maintain vision to stay on the right path. We try to achieve more by working smart, not hard.
+
+**We stay modern**
+- Our backend runs on Java 8, Groovy, Spring, Hibernate, Camel, Hazelcast, Guava and other spices
+- Our services speak REST
+- Our web runs on HTML5 with Angular
+- Our infrastructure is backed by Rackspace, Ansible, Jenkins and Gradle
+- Our lightweight process is based on Kanban and Scrum or a mix of both
+
+**Share our values?**<br>
+Then drop us few lines to rockstars@gizma.com and we will contact you promptly
+
+---
+class: gizma
+Gizma is innovative FinTech company operating in Europe and Middle East. Our mission is to provide clients with easily accessible financial tools to take advantage of the latest technology, applied in everyday life. Ambitious missions require out-of-the-box thinking, therefore we’re looking for talented individuals interested in building products that rock.
+
+**What does it mean to be a developer at Gizma?**<br>
+Since software is core part of our business, there is no gap between IT and business - we work as a single cross-functional team where all opinions and ideas matter. Because continuous innovation and continuous delivery are part of our daily life, we don’t have formal processes that our competitors tend to apply - we focus on collaboration instead.
+
+**We care about our products** <br>
+Product development goes far beyond coding. We strive to understand problem domain, work closely with customers, inject new ideas and experiment a lot. Regular R&D days are just small part of it.
+
+.attention[**We care about software quality**<br>
+Everyone in the team thinks long-term and aspires to write clean and maintainable code. We take ownership over architecture and automated testing. Refactoring, TDD and occasional pair programming are part of our daily life.]
+
+**We are extremely pragmatic**<br>
+We always stick to “best tool for the problem” approach - we listen to industry trends with big interest, but evaluate everything in our context. We do things that matter to our customers now, but maintain vision to stay on the right path. We try to achieve more by working smart, not hard.
+
+**We stay modern**
+- Our backend runs on Java 8, Groovy, Spring, Hibernate, Camel, Hazelcast, Guava and other spices
+- Our services speak REST
+- Our web runs on HTML5 with Angular
+- Our infrastructure is backed by Rackspace, Ansible, Jenkins and Gradle
+- Our lightweight process is based on Kanban and Scrum or a mix of both
+
+**Share our values?**<br>
+Then drop us few lines to rockstars@gizma.com and we will contact you promptly
+
+---
+class: gizma
+Gizma is innovative FinTech company operating in Europe and Middle East. Our mission is to provide clients with easily accessible financial tools to take advantage of the latest technology, applied in everyday life. Ambitious missions require out-of-the-box thinking, therefore we’re looking for talented individuals interested in building products that rock.
+
+**What does it mean to be a developer at Gizma?**<br>
+Since software is core part of our business, there is no gap between IT and business - we work as a single cross-functional team where all opinions and ideas matter. Because continuous innovation and continuous delivery are part of our daily life, we don’t have formal processes that our competitors tend to apply - we focus on collaboration instead.
+
+**We care about our products** <br>
+Product development goes far beyond coding. We strive to understand problem domain, work closely with customers, inject new ideas and experiment a lot. Regular R&D days are just small part of it.
+
+**We care about software quality**<br>
+Everyone in the team thinks long-term and aspires to write clean and maintainable code. We take ownership over architecture and automated testing. Refactoring, TDD and occasional pair programming are part of our daily life.
+
+.attention[**We are extremely pragmatic**<br>
+We always stick to “best tool for the problem” approach - we listen to industry trends with big interest, but evaluate everything in our context. We do things that matter to our customers now, but maintain vision to stay on the right path. We try to achieve more by working smart, not hard.]
+
+**We stay modern**
+- Our backend runs on Java 8, Groovy, Spring, Hibernate, Camel, Hazelcast, Guava and other spices
+- Our services speak REST
+- Our web runs on HTML5 with Angular
+- Our infrastructure is backed by Rackspace, Ansible, Jenkins and Gradle
+- Our lightweight process is based on Kanban and Scrum or a mix of both
+
+**Share our values?**<br>
+Then drop us few lines to rockstars@gizma.com and we will contact you promptly
+
+---
+class: gizma
+Gizma is innovative FinTech company operating in Europe and Middle East. Our mission is to provide clients with easily accessible financial tools to take advantage of the latest technology, applied in everyday life. Ambitious missions require out-of-the-box thinking, therefore we’re looking for talented individuals interested in building products that rock.
+
+**What does it mean to be a developer at Gizma?**<br>
+Since software is core part of our business, there is no gap between IT and business - we work as a single cross-functional team where all opinions and ideas matter. Because continuous innovation and continuous delivery are part of our daily life, we don’t have formal processes that our competitors tend to apply - we focus on collaboration instead.
+
+**We care about our products** <br>
+Product development goes far beyond coding. We strive to understand problem domain, work closely with customers, inject new ideas and experiment a lot. Regular R&D days are just small part of it.
+
+**We care about software quality**<br>
+Everyone in the team thinks long-term and aspires to write clean and maintainable code. We take ownership over architecture and automated testing. Refactoring, TDD and occasional pair programming are part of our daily life.
+
+**We are extremely pragmatic**<br>
+We always stick to “best tool for the problem” approach - we listen to industry trends with big interest, but evaluate everything in our context. We do things that matter to our customers now, but maintain vision to stay on the right path. We try to achieve more by working smart, not hard.
+
+.attention[**We stay modern**]
+.attention[
+- Our backend runs on Java 8, Groovy, Spring, Hibernate, Camel, Hazelcast, Guava and other spices
+- Our services speak REST
+- Our web runs on HTML5 with Angular
+- Our infrastructure is backed by Rackspace, Ansible, Jenkins and Gradle
+- Our lightweight process is based on Kanban and Scrum or a mix of both]
+
+**Share our values?**<br>
+Then drop us few lines to rockstars@gizma.com and we will contact you promptly
+
+
+---
+class: gizma
+Gizma is innovative FinTech company operating in Europe and Middle East. Our mission is to provide clients with easily accessible financial tools to take advantage of the latest technology, applied in everyday life. Ambitious missions require out-of-the-box thinking, therefore we’re looking for talented individuals interested in building products that rock.
+
+**What does it mean to be a developer at Gizma?**<br>
+Since software is core part of our business, there is no gap between IT and business - we work as a single cross-functional team where all opinions and ideas matter. Because continuous innovation and continuous delivery are part of our daily life, we don’t have formal processes that our competitors tend to apply - we focus on collaboration instead.
+
+**We care about our products** <br>
+Product development goes far beyond coding. We strive to understand problem domain, work closely with customers, inject new ideas and experiment a lot. Regular R&D days are just small part of it.
+
+**We care about software quality**<br>
+Everyone in the team thinks long-term and aspires to write clean and maintainable code. We take ownership over architecture and automated testing. Refactoring, TDD and occasional pair programming are part of our daily life.
+
+**We are extremely pragmatic**<br>
+We always stick to “best tool for the problem” approach - we listen to industry trends with big interest, but evaluate everything in our context. We do things that matter to our customers now, but maintain vision to stay on the right path. We try to achieve more by working smart, not hard.
+
+**We stay modern**
+- Our backend runs on Java 8, Groovy, Spring, Hibernate, Camel, Hazelcast, Guava and other spices
+- Our services speak REST
+- Our web runs on HTML5 with Angular
+- Our infrastructure is backed by Rackspace, Ansible, Jenkins and Gradle
+- Our lightweight process is based on Kanban and Scrum or a mix of both
+
+.attention[**Share our values?**<br>]
+.attention[Then drop us few lines to rockstars@gizma.com and we will contact you promptly]
+
+
+---
+background-image:url(visma.png)
+
+---
+class: center, middle
+# The Power of Web 3.0
+
+
+---
+class: center, middle
+# Landing Pages
+![](landingpage.png)
+???
+- E.g. for candidates coming from Ukraine, or a particular website.
+- Imigration process, imigration success stories
+- Measure effectivenes of your campaign (GA / MixPanel)
+- A/B Testing
+
+---
+background-image:url(tikmanis.png)
+
+---
+background-image:url(tech.png)
+
+---
+background-image:url(buildstuff.png)
+
+---
+background-image:url(team.png)
+
+---
+class: center, middle
+background-image:url(like.png)
+# Make geeks engage with the website.
+???
+- Collect insights! By understanding behaviour, we understand who the visitor is.
+
+---
+class: center, middle
+![](ga.png)
+
+---
+class: center, middle
+![](devternity.png)
+???
+Realtime!
+
+---
+class: center, middle
+# 
+![](mixpanel.png)
+
+
+---
+class: center, middle
+![](email.png)
+???
+Personalized.
+
+---
+class: center, middle
+![](4f_devternity.png)
+
+---
+class: center, middle
+# Retargeting
+![](retargeting.png)
+???
+- Re-engering with people who shown interest in your business
+- Re-targeting visitors who visited/liked certain pages, but didn't "convert". 
+- Look-alike audience.
+
+---
+background-image:url(viral.jpg)
+class: center
+# Viral Marketing
+???
+- Choose 3 favourite frameworks and get a book about these framework!
+- Invite your colleague to the poll and win a Soft Skill training!
+
+---
+class: center, middle
+![](ifttt.png)
+
+---
+background-image:url(twitterpoll.png)
+
+
+---
+class: center, middle
+# Community ♥
+???
+- Sponsoring community shows that you care about community to high-quality audience.
+- Loyal to the community. They love community and appreciate your support.
+- These people already GO. Hiring activists matters.
+
+---
+class: center, middle, invert
+background-image:url(bg.jpg)
+# Interviewing
+???
+Traditional interviews:
+- boring
+- stressful (thanks to interviewers)
+- time-consuming (if you can't decide, don't interview)
+- we hire hard-core shitheads and miss the best talent.
+- Lightweight 3-part interview.
+
+---
+class: center, middle
+# 1. On-site .strike[interview] coffee
+???
+- MAKE CANDIDATE LOVE THE COMPANY!!!
+- SHOW MIND-BLOWING PRESENTATION!!!
+
+---
+class: center, middle
+# Find a pair
+???
+- experienced interviewer with less exprienced (ideally both from the team)
+- teams hire peers (questions to team, exposes peers immediately, shows trust to interviewee, Eduards hired the wrong guy)
+- it scales
+- quick retrospectives
+
+---
+class: center, middle
+# .strike[Check-list] Discover
+???
+- Imagine we are in this situation together.
+- How would you? We must let people FORGET about current environment.
+
+---
+class: center, middle
+# .strike[Test] Educate
+???
+- instead of leaving with a feeling "I am stupid", I leave "Thanks to Visma, I became smarter".
+- make understand
+- books
+
+---
+class: center, middle
+# Wrap-up prematurely
+???
+- Respect each other's time
+- Explain (WE are not the right fit :-)
+- Candidate will return.
+
+---
+class: center, middle
+# Collect feedback
+
+---
+class: middle, center
+# 2. Homework
+???
+- Sell it to the candidate (e.g. GitHub)
+- Real-world challenge that checks what you need (what exactly?)
+- Give some freedom
+
+---
+background-image:url(tomatoes.jpg)
+class: center, middle, invert
+# Homework Tomatoes
+
+---
+class: center, middle
+# 3. Homework Discussion
+
+---
+class: center, middle
+![](trello.png)
+???
+- The whole process is visible for everyone
+- Auto ticket generation from email, reminders
+- Auto Slack message when candidate applies (comments and discussions)
+- Vote for candidate!
+
+
+---
+class: middle
+#  On Hiring Developers:
+### http://blog.sizovs.net/hiring1
+### http://blog.sizovs.net/hiring2
+### http://blog.sizovs.net/hiring3
+### http://blog.sizovs.net/hiring4
+
+
+
+---
+class: middle, center, invert
+background-image:url(bg.jpg)
+# Maintaining ♥ Habitat
+???
+
+---
+class: middle, center
+![](m30.jpg)&nbsp;&nbsp;
+![](m30workout.jpg)
+???
+- Salary review
+- Motivation
+
+---
+class: middle, center
+![](drive.jpg)
+
+---
+## Autonomy
+
+---
+## Autonomy
+## Mastery 
+
+---
+## Autonomy
+## Mastery 
+## Purpose
+
+---
+## Autonomy
+## Mastery 
+## Purpose
+## Affiliation
+???
+Sense of belonging. Team / People
+
+---
+class: center, middle
+# Cross-Functional Teams
+
+---
+class: center, middle
+# Cross-Functional Teams
+## .top[**Autonomy**]
+
+---
+class: center, middle
+# Brown-Bag Sessions
+???
+- Surprise others - invite famous presenter
+- Stream your brown-bags via Periscope! :)
+
+---
+class: center, middle
+# Brown-Bag Sessions
+## .top[**Mastery**]
+
+---
+class: center, middle
+.l30[
+![](identity.png)
+]
+.r70[
+# Identity Symbols
+]
+???
+- let teams choose and design their identity. Make people WANT to identify themselves with it.
+- team name
+- symbol (e.g. flag)
+- t-shirt test
+
+---
+class: center, middle
+.l30[
+![](identity.png)
+]
+.r70[
+# Identity Symbols
+]
+## .top[**Affiliation**]
+
+---
+class: middle, center
+.l30[
+![](pitch.png)
+]
+.r70[
+# Feature Pitching
+]
+
+---
+class: middle, center
+.l30[
+![](pitch.png)
+]
+.r70[
+# Feature Pitching
+]
+## .top[**Purpose**]
+
+---
+class: center, middle
+# Townhalls
+???
+Overall company direction, open Q&A
+
+---
+class: center, middle
+# Townhalls
+## .top[**Purpose**]
+
+---
+background-image:url(askfm.png)
+
+
+---
+class: center, middle
+# Hackatons 
+## a-ka ShipIt days
+???
+- Automate things!
+- Experiment with crazy ideas!
+- Learn new things!
+- Alarm lamps, new product lines, reduced build times...
+
+
+---
+class: center, middle
+# Hackatons 
+## a-ka ShipIt days
+## .top[**Autonomy - Mastery - Purpose - Affiliation**]
+
+---
+class: center, middle
+# OSS
+???
+OSS unites you and do not let you leave actually, because you can blab about it at work :-)
+
+---
+class: center, middle
+# OSS
+## .top[**Autonomy - Mastery - Purpose - Affiliation**]
+
+
+---
+background-image:url(kudos.jpg)
+???
+- It lets people praise good behaviours (that enable good change). Others follow.
+- The major reason why people live is lack of appreciation.
+
+---
+background-image:url(growbot.png)
+
+---
+### - educate Team Leaders
+### - keep Stable Teams
+### - celebrate learning (fuckups too!)
+### - build fairness in (promotions, titles, salaries, performance reviews)
+### - continuous improvement and experimentation
+### - and much more ...
+
+---
+class: center, middle
+## There is NO talent shortage on the market. There is shortage of companies that can attract and keep the talent.
+???
+- Be creative
+- Be different :-)
+- Use the power of technology
+- Remember that tiny details matter.
+
+---
+class: center, middle
+# Thank you
+    </textarea>
+    <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create({ 
+            ratio: '16:9', 
+            slideNumberFormat: function (current, total) { return "" } 
+      });
+
+      slideshow.on('afterShowSlide', function (slide) {
+      });      
+    </script>
+  </body>
+</html>
